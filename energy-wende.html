@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Idris - Blog</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        :root {
+            --primary-color: #0078D7;
+            --accent-color: #FFC300;
+            --text-color: #333333;
+            --background-color: #f9f9f9;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            color: var(--text-color);
+            background-color: var(--background-color);
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar {
+            background-color: var(--primary-color);
+        }
+
+        .navbar .nav-link {
+            color: white;
+        }
+
+        .navbar .nav-link:hover {
+            color: var(--accent-color);
+        }
+
+        .blog-header {
+            text-align: center;
+            padding: 40px 20px;
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .blog-header h1 {
+            font-size: 2.5rem;
+        }
+
+        .blog-header p {
+            font-size: 1.2rem;
+        }
+
+        .blog-container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .blog-container h2 {
+            color: var(--primary-color);
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+        }
+
+        .blog-container p {
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        footer a {
+            color: var(--accent-color);
+        }
+
+        footer a:hover {
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand text-white" href="index.html">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                    class="bi bi-eyeglasses" viewBox="0 0 16 16">
+                    <path
+                        d="M4 6a2 2 0 1 1 0 4 2 2 0 0 1 0-4m2.625.547a3 3 0 0 0-5.584.953H.5a.5.5 0 0 0 0 1h.541A3 3 0 0 0 7 8a1 1 0 0 1 2 0 3 3 0 0 0 5.959.5h.541a.5.5 0 0 0 0-1h-.541a3 3 0 0 0-5.584-.953A2 2 0 0 0 8 6c-.532 0-1.016.208-1.375.547M14 8a2 2 0 1 1-4 0 2 2 0 0 1 4 0" />
+                </svg> Idris
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about-me.html">About Me</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Blog Header -->
+    <header class="blog-header">
+        <h1>My Blog</h1>
+        <p>Thoughts, Insights, and Ideas</p>
+    </header>
+
+    <!-- Blog Content -->
+    <div class="blog-container">
+        <h2>Energy Transition of Germany</h2>
+        <img src="./images/energy-transition.webp" alt="Energy Transition of Germany" class="img-fluid rounded my-3">
+        <p>
+        <p>
+            Germany has put an important aim for his future. Until 2050 will Germany CO2 emission free. That is why it
+            has to take important measures. Is it possible to generate all the energy that today Germany produces from
+            renewable energy resources? Let us make a brain storm.
+        </p>
+        <p>
+            Think about a bicycle rider, that 10 hours long rides. What do you think, how much electricity he will
+            generate? We can fairly say that 1 kWh. That is not so much. We can wash our clothes one time in 60 degrees,
+            we can light a light bulb 10 hours or we can light an LED light 60 hours or we can take a hot shover 3
+            minutes long. It corresponds to 100 ml of oil. With an electric car we can drive up until 6 km in city. But
+            with this amount of oil with a combustion engine car we can just drive 1 or 2 km.
+        </p>
+        <p>
+            Now let us think about the amount of energy that have been produced in Germany. We will divide this amount
+            to the days in a year. Then we will divide it to the population of Germany. Now we have 120 kWh. That means
+            120 riders should ride 10 hours a day.
+        </p>
+        <p>
+            Apart from riders we have sun, wind and water power. These three are the ultimate renewable energies. Atom
+            power is not going to be included in this brain storm. We will concisely say that they are very expensive
+            and nuclear waste is a great problem that is not yet to solve. But it would be more nature saving when we
+            shut down the coal thermal power plants instead of already active nuclear plants in short term.
+        </p>
+        <p>
+            Let’s see what can we do with solar energies. Our sun is very important for our world. Our lives are
+            dependent on sun. We can be more dependent to this huge energy resource.
+        </p>
+        <p>
+            There are two types of energy producer in this area. Solar thermal energy or photovoltaic. First is not that
+            much efficient in energy production. We will go on with last. Today photovoltaic panels can convert the 20%
+            of the sun energy. So here there are much to do for the scientist. Its efficiency should be increased!
+        </p>
+        <p>
+            So, if the 1.4% of the Germany would be covered with the photovoltaic panels that converts in average 50 %
+            of the sun energy, we would have 25 kWh pro person! That is unfortunately not that much! But we have wind
+            and water.
+        </p>
+        <p>
+            Here are some mind-blowing numbers about wind turbines. If we have 2 times faster wind, we produce 8 times
+            energy. If we have 2 times more diameter, we produce 4 times more energy. If we build our wind turbine not
+            100 meters but 200 meters, we produce 1.5 times energy. So, it seems pretty efficient.
+        </p>
+        <p>
+            Although there is a limit in wind energy that can not be passed, Benz-Limit. So, according to this theoretic
+            law we cannot pass the efficiency of 59%. That means we can convert max. 59% energy of the wind. In order to
+            produce 40 kWh pro person and day we should build 40 000 wind turbines to the land and 20 000 wind turbines
+            to the sea. There are lots to do!
+        </p>
+        <p>
+            What about water power? Today water powerplants can convert the water energy up until 90%. But
+            unfortunately, Germany is not a water power plant country. Because there isn’t enough height in flowing
+            waters.
+        </p>
+        <p>
+            So, Germany produces 120 kWh pro day and pro person. But we made altogether 65 kWh. That means we have to
+            reduce the energy production. That does not mean that we will not drive cars and use electricity. We will do
+            it just more efficient way. We will drive electric cars and we will heat our homes with heat pumps.
+        </p>
+        <p>
+            We have other problems too. What renewable energy resources can produce is a fluctuating energy. That means
+            sometimes it produces very high energy above the demand but sometimes it produces nothing at all. To be able
+            to solve this problem we have to develop better batteries or something that can conserve energy. In the
+            future electricity production will be decentralized. It means we need better smart grids and better ways to
+            divide electricity.
+        </p>
+        <p>
+            All these problems have to be solved. Germany and all the world have to be CO2 neutral. We must do this.
+            Other way there are much more big troubles and catastrophes are waiting for us. Believe me these will cause
+            in future much more money than today.
+        </p>
+        <p>
+            We need more engineers and scientist who can find solutions to these problems. These solutions will
+            definitely contain AI solutions. We have to see the problems wider and we have to think wider to overcome
+            these problems and do what engineer do for years. We will make things more efficient!
+        </p>
+        <p>Published: Dec 21, 2024</p>
+        <!-- Content continues... -->
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2024 Idris | <a href="https://www.linkedin.com/in/idris-bahce/">LinkedIn</a> | <a
+                href="https://github.com/idris-bahce">GitHub</a></p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
