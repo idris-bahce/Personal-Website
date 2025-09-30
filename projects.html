@@ -2,119 +2,41 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects - Idris</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Projects — Idris</title>
+    <meta name="description"
+        content="Explore my engineering projects, code repositories, and experiments in robotics, aerospace, and sustainable tech.">
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f8f9fa;
-            color: #333;
-        }
-
-        .project-card {
-            margin-bottom: 20px;
-            padding: 20px;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            transition: transform 0.2s, box-shadow 0.2s;
-            background-color: #fff;
-        }
-
-        .project-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-        }
-
-        .project-card h5 {
-            color: #0078D7;
-            font-weight: bold;
-        }
-
-        .project-card p {
-            font-size: 0.9rem;
-            color: #555;
-        }
-
-        .project-card a {
-            text-decoration: none;
-            font-weight: bold;
-            color: #fff;
-        }
-
-        .project-card a.btn {
-            background-color: #0078D7;
-            border: none;
-        }
-
-        .project-card a.btn:hover {
-            background-color: #0056a3;
-        }
-
-        footer {
-            background-color: #0078D7;
-            color: #fff;
-            text-align: center;
-            padding: 10px 0;
-        }
-
-        .container {
-            max-width: 1200px;
-        }
-
-        .hero {
-            margin-bottom: 40px;
-        }
-
-        .navbar .nav-link:hover {
-            color: #FFC300;
-        }
-
-        .navbar {
-            background-color: #0078D7;
-        }
-
-        .navbar .nav-link {
-            color: #fff;
-        }
-
-        .project-card {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            height: 100%;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            padding: 15px;
-            margin-bottom: 20px;
-        }
-
-        .project-card .btn {
-            align-self: flex-start;
-        }
-    </style>
+        crossorigin="anonymous" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css" />
 </head>
 
 <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <nav class="navbar navbar-expand-lg navbar-dark shadow-sm sticky-top bg-primary-gradient">
         <div class="container">
-            <a class="navbar-brand" href="index.html"> <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"
-                    fill="currentColor" class="bi bi-eyeglasses" viewBox="0 0 16 16">
+            <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor"
+                    class="bi bi-eyeglasses" viewBox="0 0 16 16" aria-hidden="true">
                     <path
                         d="M4 6a2 2 0 1 1 0 4 2 2 0 0 1 0-4m2.625.547a3 3 0 0 0-5.584.953H.5a.5.5 0 0 0 0 1h.541A3 3 0 0 0 7 8a1 1 0 0 1 2 0 3 3 0 0 0 5.959.5h.541a.5.5 0 0 0 0-1h-.541a3 3 0 0 0-5.584-.953A2 2 0 0 0 8 6c-.532 0-1.016.208-1.375.547M14 8a2 2 0 1 1-4 0 2 2 0 0 1 4 0" />
-                </svg> Idris</a>
+                </svg>
+                <span class="fw-bold">Idris</span>
+            </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
+                <ul class="navbar-nav ms-auto align-items-lg-center">
                     <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="projects.html">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="lab.html">Lab</a></li>
                     <li class="nav-item"><a class="nav-link" href="about-me.html">About Me</a></li>
                     <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
                 </ul>
@@ -122,54 +44,97 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <div class="container text-center my-5 hero">
-        <h1>My Projects</h1>
-        <p>Here are some of my public repositories from GitHub:</p>
-    </div>
-
-    <!-- Projects Section -->
-    <div class="container">
-        <div class="row" id="projects-container">
+    <!-- Header -->
+    <header class="py-5 text-center bg-surface">
+        <div class="container">
+            <h1 class="fw-bold">My Projects</h1>
+            <p class="text-muted mb-0">Selected public repositories from GitHub</p>
         </div>
-    </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="py-5">
+        <div class="container">
+            <div class="row g-4" id="projects-container" aria-live="polite"></div>
+        </div>
+    </main>
 
     <!-- Footer -->
-    <footer>
-        <p>© 2024 Idris | <a href="https://www.linkedin.com/in/idris-bahce/" style="color: #ffc107;">LinkedIn</a> | <a
-                href="https://github.com/idris-bahce" style="color: #ffc107;">GitHub</a></p>
+    <footer class="site-footer">
+        <div class="container d-flex flex-column flex-md-row align-items-center justify-content-between gap-2">
+            <p class="mb-0">&copy; <span id="year-projects"></span> Idris</p>
+            <div class="d-flex gap-3">
+                <a href="https://www.linkedin.com/in/idris-bahce/" target="_blank" rel="noopener"
+                    aria-label="Connect on LinkedIn">LinkedIn</a>
+                <a href="https://github.com/idris-bahce" target="_blank" rel="noopener"
+                    aria-label="View GitHub profile">GitHub</a>
+            </div>
+        </div>
     </footer>
 
-    <!-- Script to Fetch GitHub Repos -->
     <script>
-        const container = document.getElementById("projects-container");
+        const container = document.getElementById('projects-container');
+        const apiUrl = 'https://api.github.com/users/idris-bahce/repos?sort=pushed&per_page=30';
 
-        // GitHub API URL
-        const apiUrl = "https://api.github.com/users/idris-bahce/repos";
+        function repoCard(repo) {
+            const updated = new Date(repo.pushed_at).toLocaleDateString();
+            const desc = repo.description ? repo.description : 'No description available.';
+            const lang = repo.language ? `<span class="badge bg-light text-dark">${repo.language}</span>` : '';
+            const stars = repo.stargazers_count ? `<span class="badge bg-warning text-dark">★ ${repo.stargazers_count}</span>` : '';
 
-        // Fetch and display repositories
+            return `
+        <div class="col-md-6 col-lg-4">
+          <article class="card h-100 lift">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title mb-1">${repo.name}</h5>
+              <p class="text-muted small mb-2">Updated ${updated}</p>
+              <p class="card-text flex-grow-1">${desc}</p>
+              <div class="d-flex gap-2 mb-3">${lang} ${stars}</div>
+              <div class="d-flex gap-2">
+                <a class="btn btn-primary btn-sm" href="${repo.html_url}" target="_blank" rel="noopener" aria-label="View ${repo.name} on GitHub">View on GitHub</a>
+                ${repo.homepage ? `<a class="btn btn-outline-primary btn-sm" href="${repo.homepage}" target="_blank" rel="noopener" aria-label="View ${repo.name} live demo">Live</a>` : ''}
+              </div>
+            </div>
+          </article>
+        </div>`;
+        }
+
+        // Show loading state
+        container.innerHTML = `
+            <div class="col-12 text-center py-5">
+                <div class="loading-spinner mx-auto mb-3"></div>
+                <p class="text-muted">Loading repositories...</p>
+            </div>
+        `;
+
+        // Fetch repositories
         fetch(apiUrl)
-            .then(response => response.json())
-            .then(data => {
-                data.forEach(repo => {
-                    const projectCard = `
-                        <div class="col-md-4 my-2 d-flex align-items-stretch">
-                            <div class="project-card w-100">
-                                <h5>${repo.name}</h5>
-                                <p>${repo.description ? repo.description : "No description available."}</p>
-                                <a href="${repo.html_url}" target="_blank" class="btn btn-primary btn-sm mt-auto">View on GitHub</a>
-                            </div>
-                        </div>
-                    `;
-                    container.innerHTML += projectCard;
-                });
+            .then(r => {
+                if (!r.ok) throw new Error('API request failed');
+                return r.json();
             })
-            .catch(error => {
-                container.innerHTML = `<p>Failed to load projects. Please try again later.</p>`;
-                console.error("Error fetching GitHub data:", error);
+            .then(data => {
+                if (!Array.isArray(data) || data.length === 0) {
+                    throw new Error('No repositories found');
+                }
+                container.innerHTML = data.map(repoCard).join('');
+            })
+            .catch(err => {
+                console.error('Error loading projects:', err);
+                container.innerHTML = `
+                    <div class="col-12">
+                        <div class="alert alert-warning" role="alert">
+                            <h4 class="alert-heading">Unable to load projects</h4>
+                            <p class="mb-2">There was an issue loading the GitHub repositories. This might be due to API rate limits.</p>
+                            <hr>
+                            <p class="mb-0">Please visit <a href="https://github.com/idris-bahce" target="_blank" rel="noopener" class="alert-link">my GitHub profile</a> directly to view all projects.</p>
+                        </div>
+                    </div>
+                `;
             });
-    </script>
 
+        document.getElementById('year-projects').textContent = new Date().getFullYear();
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>

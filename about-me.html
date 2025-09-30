@@ -1,118 +1,272 @@
-<!-- About Me Page -->
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me - Idris</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>About Me — Idris</title>
+    <meta name="description"
+        content="Learn about my journey from Economics to Electrical Engineering, my passion for robotics and sustainable tech, and my goals for the future.">
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        crossorigin="anonymous" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css" />
     <style>
-        :root {
-            --primary-color: #0078D7;
-            --secondary-color: #39FF14;
-            --background-color: #f8f9fa;
-            --text-color: #333333;
-            --accent-color: #FFC300;
-        }
-
-        body {
-            background-color: var(--background-color);
-            color: var(--text-color);
-            min-height: 100vh;
+        .about-hero {
+            position: relative;
+            overflow: hidden;
+            min-height: 60vh;
             display: flex;
-            flex-direction: column;
+            align-items: center;
         }
 
-        .navbar {
-            background-color: var(--primary-color);
+        .about-hero-bg {
+            position: absolute;
+            inset: 0;
+            background-position: center center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            z-index: 0;
+            filter: saturate(1) contrast(1.05);
         }
 
-        .navbar .nav-link {
+        .about-hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(1200px 600px at 50% 40%, rgba(0, 0, 0, .35), rgba(0, 0, 0, .65));
+            z-index: 1;
+        }
+
+        .about-hero .container {
+            position: relative;
+            z-index: 2;
+        }
+
+        .about-hero h1,
+        .about-hero p {
             color: #fff;
         }
 
-        .navbar .nav-link:hover {
-            color: var(--accent-color);
+        .interest-item {
+            padding: 25px;
+            background: white;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+            height: 100%;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
         }
 
-        footer {
-            background-color: var(--primary-color);
-            color: #fff;
-            margin-top: auto;
-            text-align: center;
-            padding: 15px 0;
+        .interest-item:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
         }
 
-        footer a {
-            color: var(--accent-color);
+        .interest-item h3 {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            color: var(--primary);
         }
 
-        footer a:hover {
-            color: var(--secondary-color);
+        .timeline-simple {
+            border-left: 2px solid var(--border);
+            padding-left: 25px;
+            margin-left: 10px;
         }
 
-        .content {
-            padding: 40px 15px;
+        .timeline-simple .year {
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 5px;
         }
 
-        .profile-photo {
-            max-width: 300px;
+        .timeline-simple .item {
+            margin-bottom: 30px;
+            position: relative;
+        }
+
+        .timeline-simple .item::before {
+            content: '';
+            position: absolute;
+            left: -31px;
+            top: 5px;
+            width: 10px;
+            height: 10px;
             border-radius: 50%;
+            background: var(--primary);
+            border: 2px solid white;
+            box-shadow: 0 0 0 2px var(--primary);
         }
     </style>
 </head>
 
 <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg">
+    <nav class="navbar navbar-expand-lg navbar-dark shadow-sm sticky-top bg-primary-gradient">
         <div class="container">
-            <a class="navbar-brand text-white" href="index.html"><svg xmlns="http://www.w3.org/2000/svg" width="30"
-                    height="30" fill="currentColor" class="bi bi-eyeglasses" viewBox="0 0 16 16">
+            <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor"
+                    class="bi bi-eyeglasses" viewBox="0 0 16 16" aria-hidden="true">
                     <path
                         d="M4 6a2 2 0 1 1 0 4 2 2 0 0 1 0-4m2.625.547a3 3 0 0 0-5.584.953H.5a.5.5 0 0 0 0 1h.541A3 3 0 0 0 7 8a1 1 0 0 1 2 0 3 3 0 0 0 5.959.5h.541a.5.5 0 0 0 0-1h-.541a3 3 0 0 0-5.584-.953A2 2 0 0 0 8 6c-.532 0-1.016.208-1.375.547M14 8a2 2 0 1 1-4 0 2 2 0 0 1 4 0" />
-                </svg> Idris</a>
+                </svg>
+                <span class="fw-bold">Idris</span>
+            </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
+                <ul class="navbar-nav ms-auto align-items-lg-center">
                     <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
-                    <li class="nav-item"><a class="nav-link" href="about.html">About Me</a></li>
+                    <li class="nav-item"><a class="nav-link" href="lab.html">Lab</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="about-me.html">About Me</a></li>
                     <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <!-- About Me Content -->
-    <section class="content container text-center">
-        <img src="./images/profile.jpg" alt="Idris" class="profile-photo mb-4">
-        <h1>About Me</h1>
-        <p class="lead">Hi, I’m Idris. I’m an aspiring electrical engineering student at the University of Berlin with a
-            deep passion for technology, robotics, and aerospace. I enjoy exploring the intersection of hardware and
-            software, constantly learning and creating innovative solutions.</p>
-        <p>My goal is to contribute to groundbreaking projects that make a difference in the world and that will solve
-            the problems our world such as grobal warming, polution and energy. Outside of
-            engineering, I love traveling, doing sport, and diving into thought-provoking books. This website serves
-            as a space to share my projects and ideas with the world.</p>
-        <hr>
-        <h2>Education</h2>
-        <p>I have studied economics at the Anadolu University in Eskisehir/Turkey. Than I have made bootcamp for web
-            automation tester. I have worked as a tester for a while. Now I want to get better education in science,
-            technology, engineering, and mathematics (STEM).</p>
+    <!-- Hero Section -->
+    <header class="about-hero position-relative">
+        <div class="about-hero-bg" style="background-image: url('./images/profile.jpg');" role="img"
+            aria-label="Portrait background of Idris"></div>
+        <div class="about-hero-overlay"></div>
+    </header>
+
+    <!-- Intro Text -->
+    <section class="py-5 bg-surface text-center">
+        <div class="container">
+            <h1 class="h2 fw-bold mb-3">Hi, I'm Idris</h1>
+            <p class="lead mb-4" style="max-width: 600px; margin: 0 auto;">
+                Aspiring electrical engineer passionate about robotics, sustainable tech, and aerospace.
+                I enjoy building things where hardware meets software.
+            </p>
+        </div>
     </section>
 
-    <!-- Footer -->
-    <footer>
-        <p>© 2024 Idris | <a href="https://www.linkedin.com/in/idris-bahce/">LinkedIn</a> | <a
-                href="https://github.com/idris-bahce">GitHub</a></p>
-    </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Main Content -->
+    <main>
+        <!-- Education Journey -->
+        <section class="py-5 bg-white">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 mx-auto">
+                        <h2 class="h4 mb-4">My Journey</h2>
+                        <div class="timeline-simple">
+                            <div class="item">
+                                <div class="year">2020 - 2023</div>
+                                <h3 class="h6 mb-2">Economics at Anadolu University</h3>
+                                <p class="text-muted mb-0">Studied Economics in Eskişehir, Türkiye, developing
+                                    analytical and problem-solving skills.</p>
+                            </div>
+                            <div class="item">
+                                <div class="year">2022 - 2023</div>
+                                <h3 class="h6 mb-2">Web Test Automation Bootcamp</h3>
+                                <p class="text-muted mb-0">Completed an intensive bootcamp, discovering my interest in
+                                    programming and software development.</p>
+                            </div>
+                            <div class="item">
+                                <div class="year">2023</div>
+                                <h3 class="h6 mb-2">QA Tester</h3>
+                                <p class="text-muted mb-0">Worked as a software tester, gaining hands-on experience with
+                                    development processes and quality assurance.</p>
+                            </div>
+                            <div class="item">
+                                <div class="year">2025 - Present</div>
+                                <h3 class="h6 mb-2">Electrical Engineering @ HTW Berlin</h3>
+                                <p class="text-muted mb-0">Currently studying at HTW Berlin (University of Applied
+                                    Sciences), focusing on embedded systems and robotics.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
+        <!-- Areas of Interest -->
+        <section class="py-5 bg-surface">
+            <div class="container">
+                <h2 class="h4 text-center mb-5">Areas of Interest</h2>
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="interest-item">
+                            <h3>Robotics & Embedded Systems</h3>
+                            <p class="text-muted mb-0">Building autonomous systems with Arduino, Raspberry Pi, and
+                                exploring the intersection of hardware and software.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="interest-item">
+                            <h3>Sustainable Technology</h3>
+                            <p class="text-muted mb-0">Interested in renewable energy systems and developing
+                                eco-friendly engineering solutions.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="interest-item">
+                            <h3>Aerospace Engineering</h3>
+                            <p class="text-muted mb-0">Fascinated by space exploration, satellite technology, and the
+                                engineering challenges of spaceflight.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Me -->
+        <section class="py-5 bg-white">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 mx-auto">
+                        <h2 class="h4 mb-4">Beyond Engineering</h2>
+                        <p>I'm deeply curious about how technology can solve pressing global challenges. My current
+                            interests revolve around renewable energy systems, robotics, and aerospace engineering. I
+                            believe that by combining a strong foundation in electrical engineering with modern software
+                            skills, I can contribute to building smarter, more sustainable technologies.</p>
+                        <p>Outside of my studies and projects, I enjoy traveling to new places, playing sports to stay
+                            active, and exploring thought-provoking books. These activities keep me balanced and often
+                            inspire creative ideas that I bring into my technical work.</p>
+                        <p class="mb-0">My long-term goal is to be part of interdisciplinary teams working on
+                            innovations that have a positive impact worldwide, whether that's in renewable energy,
+                            robotics, or aerospace systems.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action -->
+        <section class="py-5 bg-surface">
+            <div class="container text-center">
+                <h2 class="h4 mb-4">Let's Connect</h2>
+                <p class="mb-4">I'm always interested in discussing new ideas, projects, or collaboration opportunities.
+                </p>
+                <div class="d-flex gap-3 justify-content-center">
+                    <a href="projects.html" class="btn btn-primary">View My Work</a>
+                    <a href="contact.html" class="btn btn-outline-primary">Get in Touch</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container d-flex flex-column flex-md-row align-items-center justify-content-between gap-2">
+            <p class="mb-0">&copy; <span id="year-about"></span> Idris</p>
+            <div class="d-flex gap-3">
+                <a href="https://www.linkedin.com/in/idris-bahce/" target="_blank" rel="noopener"
+                    aria-label="Connect on LinkedIn">LinkedIn</a>
+                <a href="https://github.com/idris-bahce" target="_blank" rel="noopener"
+                    aria-label="View GitHub profile">GitHub</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>document.getElementById('year-about').textContent = new Date().getFullYear();</script>
 </body>
 
 </html>
